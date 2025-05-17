@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DBS PROJECT</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+      integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="side-panel">
+        <div class="logo">
+          <h1>BUILDERS&CO</h1>
+        </div>
+        <ul>
+          <li class="dashboardLi active">
+            <button class="list-item dashboardBtn">DASHBOARD</button>
+          </li>
+          <li class="customersLi">
+            <button class="list-item customersBtn">CUSTOMERS</button>
+          </li>
+          <li class="apartmentsLi">
+            <button class="list-item apartmentsBtn">APARTMENTS</button>
+          </li>
+          <li class="installmentsLi">
+            <button class="list-item installmentsBtn">INSTALLMENTS</button>
+          </li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <section class="dashboard active-sec" style="display: block">
+          <h2>dashboard</h2>
+        </section>
+        <section class="customers" style="display: none">
+          <h2>customer</h2>
+          <form id="customerForm">
+            <input type="text" placeholder="first name" id="firstName" />
+            <input type="text" placeholder="last name" id="lastName" />
+            <input type="email" placeholder="email" id="email"/>
+            <input type="number" placeholder="contact" id="contact" />
+            <input type="number" placeholder="nic" id="nic"/>
+            <button type="submit">Add Customer</button>
+          </form>
+          <h2>View Customers</h2>
+          <table>
+              <thead>
+                  <tr>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Email</th>
+                      <th>Contact</th>
+                      <th>NIC</th>
+                      <th>Created at</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Bob</td>
+                      <td>John</td>
+                      <td>bob@gmail.com</td>
+                      <td>0312345678</td>
+                      <td>42301312345678</td>
+                      <td>1-10-2025 10:00</td>
+                  </tr>
+                  <tr>
+                      <td>Bob</td>
+                      <td>John</td>
+                      <td>bob@gmail.com</td>
+                      <td>0312345678</td>
+                      <td>42301312345678</td>
+                      <td>1-10-2025 10:00</td>
+                  </tr>
+                  <tr>
+                      <td>Bob</td>
+                      <td>John</td>
+                      <td>bob@gmail.com</td>
+                      <td>0312345678</td>
+                      <td>42301312345678</td>
+                      <td>1-10-2025 10:00</td>
+                  </tr>
+              </tbody>
+          </table>
+        </section>
+        <section class="apartments" style="display: none">
+          <h2>Apartments</h2>
+        </section>
+        <section class="installments" style="display: none">
+          <h2>installments</h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
