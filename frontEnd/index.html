@@ -89,16 +89,24 @@
       <section class="dashboard" id="dashboardSec">
         <h1>Dashboard</h1>
         <div class="dashboard-cards">
-          <div class="card">Total Customers: <span id="totalCustomers"></span></div>
-          <div class="card">Total Apartments: <span id="totalApartments"></span></div>
-          <div class="card">Available Apartments: <span id="availableApartments"></span></div>
-          <div class="card">Total Bookings: <span id="totalBookings"></span></div>
-          <div class="card">Pending Installments: <span id="pendingInstallments"></span></div>
+          <div class="card">Total Customers: <span id="totalCustomers">12</span></div>
+          <div class="card">Total Apartments: <span id="totalApartments">8</span></div>
+          <div class="card">Available Apartments: <span id="availableApartments">3</span></div>
+          <div class="card">Total Bookings: <span id="totalBookings">6</span></div>
+          <div class="card">Pending Installments: <span id="pendingInstallments">4</span></div>
         </div>
         <h2>Recent Bookings</h2>
-        <ul id="recentBookings"></ul>
+        <ul id="recentBookings">
+          <li>Ali Hassan booked Apartment #2 (2025-05-20)</li>
+          <li>Sara Khan booked Apartment #5 (2025-05-18)</li>
+          <li>Ahmed Raza booked Apartment #1 (2025-05-15)</li>
+        </ul>
         <h2>Upcoming Installments</h2>
-        <ul id="upcomingInstallments"></ul>
+        <ul id="upcomingInstallments">
+          <li>Ali Hassan - Rs. 10,000 due on 2025-06-01</li>
+          <li>Sara Khan - Rs. 12,000 due on 2025-06-03</li>
+          <li>Ahmed Raza - Rs. 8,500 due on 2025-06-05</li>
+        </ul>
       </section>
       <section class="customers active-sec" id="customersSec">
         <h1>Customers</h1>
@@ -164,7 +172,6 @@
               <td>0929829</td>
               <td>323u2w32</td>
               <td>18-05-25 10:00</td>
-              <td></td> <!-- Added -->
             </tr>
           </tbody>
         </table>
@@ -174,7 +181,7 @@
         <form id="apartmentsForm">
           <input type="text" placeholder="Floor" id="floorInput" />
           <input type="text" placeholder="Type" id="typeInput" />
-          <input type="email" placeholder="Prize" id="prizeInput" />
+          <input type="number" placeholder="Prize" id="prizeInput" />
           <input type="number" placeholder="Size" id="sizeInput" />
           <button type="submit">Add Apartment</button>
         </form>
@@ -198,7 +205,7 @@
             </tr>
           </thead>
           <tbody id="apartmentsBody">
-            <tr>
+            <tr>3000000
               <td>bob</td>
               <td>jade</td>
               <td>bob@gmail</td>
@@ -225,7 +232,7 @@
           <input type="text" placeholder="Apartment ID" id="apartmentIdInput" />
           <input type="text" placeholder="Customer ID" id="customerIdInput" />
           <input type="text" placeholder="Type" id="typeInput" />
-          <input type="email" placeholder="Prize" id="prizeInput" />
+          <input type="number" placeholder="Prize" id="prizeInput" />
           <input type="number" placeholder="Size" id="sizeInput" />
           <button type="submit">Add Apartment</button>
         </form>
@@ -275,7 +282,7 @@
           />
           <input type="text" placeholder="Amount" id="amountInput" />
           <input type="date" placeholder="Due Date" id="dueDateInput" />
-          <button type="submit">Add Installments</button>
+          <button type="submit">Add Installment</button>
         </form>
         <h2>View Installments</h2>
         <input
@@ -289,7 +296,7 @@
             <tr>
               <th>Installment ID</th>
               <th>Booking ID</th>
-              <th>Customer</th>
+              <th>Customer Name</th>
               <th>Apartment ID</th>
               <th>Installment #</th>
               <th>Amount</th>
@@ -298,20 +305,7 @@
             </tr>
           </thead>
           <tbody id="installmentsBody">
-            <tr>
-              <td>bob</td>
-              <td>jade</td>
-              <td>bob@gmail</td>
-              <td></td>
-              <td>18-05-25 10:00</td>
-            </tr>
-            <tr>
-              <td>bob</td>
-              <td>jade</td>
-              <td>bob@gmail</td>
-              <td>323u2w32</td>
-              <td>18-05-25 10:00</td>
-            </tr>
+            <!-- JS will fill this -->
           </tbody>
         </table>
       </section>
