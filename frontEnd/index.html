@@ -3,108 +3,319 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DBS PROJECT</title>
+    <title></title>
     <link href="style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
-      integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
-
   <body>
-    <div class="container">
-      <div class="side-panel">
-        <div class="logo">
-          <h1>BUILDERS&CO</h1>
-        </div>
+    <header>
+      <button class="toggle-side-bar" id="toggle">=</button>
+      <div class="logo">
+        <svg
+          fill="#fff"
+          height="80px"
+          width="80px"
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 463 463"
+          xml:space="preserve"
+        >
+          <g>
+            <path
+              d="M70,331.5c0-7.995-6.505-14.5-14.5-14.5S41,323.505,41,331.5S47.505,346,55.5,346S70,339.495,70,331.5z"
+            />
+            <path
+              d="M455.5,356h-11.548l-43.025-78.88c-3.069-5.625-8.956-9.12-15.427-9.12c-9.649,0-17.5,7.851-17.5,17.5V332h-25.013
+		c0.002-0.167,0.013-0.332,0.013-0.5c0-12.629-4.964-24.113-13.031-32.63C341.771,297.631,351,287.624,351,275.5v-56
+		c0-12.958-10.542-23.5-23.5-23.5H255v-40.5c0-8.547-6.953-15.5-15.5-15.5H239v-29.187c0-4.14-1.612-8.032-4.54-10.96
+		l-13.657-13.657c-2.929-2.929-7.678-2.929-10.606,0c-2.929,2.929-2.929,7.678,0,10.606l13.657,13.657
+		c0.094,0.095,0.146,0.22,0.146,0.354V140h-0.5c-8.547,0-15.5,6.953-15.5,15.5V196h-11.422l-26.091-65.228
+		C166.897,121.798,158.333,116,148.667,116H39.5c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5H40v65H23.5
+		C10.542,196,0,206.542,0,219.5v56c0,12.124,9.229,22.131,21.031,23.37C12.964,307.386,8,318.871,8,331.5
+		C8,357.691,29.309,379,55.5,379h240c20.765,0,38.448-13.399,44.889-32H368v16.5c0,4.142,3.358,7.5,7.5,7.5h63.861
+		c0.048,0.001,0.097,0.001,0.146,0.001c0.048,0,0.097,0,0.146-0.001H455.5c4.142,0,7.5-3.358,7.5-7.5S459.642,356,455.5,356z
+		 M295.5,317c-7.995,0-14.5,6.505-14.5,14.5c0,0.169,0.02,0.333,0.025,0.5h-18.013c-0.003-0.167-0.013-0.332-0.013-0.5
+		c0-17.92,14.58-32.5,32.5-32.5s32.5,14.58,32.5,32.5c0,0.168-0.01,0.333-0.013,0.5h-18.013c0.006-0.167,0.025-0.331,0.025-0.5
+		C310,323.505,303.495,317,295.5,317z M127.5,347h123.111c2.214,6.394,5.755,12.169,10.296,17H90.094
+		C98.088,355.496,103,344.064,103,331.5c0-15.966-7.926-30.106-20.042-38.723l29.514-5.975c-0.309,1.518-0.473,3.089-0.473,4.698
+		c0,12.958,10.542,23.5,23.5,23.5h80c12.958,0,23.5-10.542,23.5-23.5c0-1.609-0.163-3.181-0.473-4.7l29.521,5.974
+		C255.929,301.389,248,315.531,248,331.5c0,0.168,0.011,0.333,0.013,0.5H127.5c-4.142,0-7.5,3.358-7.5,7.5S123.358,347,127.5,347z
+		 M161.697,196l-15.375-41h17.7l16.4,41H161.697z M130.303,155L152,212.86V236h-48.5c-9.098,0-16.5-7.402-16.5-16.5V155H130.303z
+		 M224,291.5c0,4.687-3.813,8.5-8.5,8.5c-2.446,0-4.694-1.004-6.33-2.827c-1.633-1.819-2.385-4.183-2.117-6.653
+		c0.449-4.142,4.23-7.395,8.66-7.509C220.301,283.125,224,286.885,224,291.5z M193.602,283c-0.728,1.861-1.237,3.834-1.462,5.903
+		c-0.412,3.805,0.111,7.609,1.462,11.097h-36.181c1.17-3.017,1.711-6.276,1.553-9.626c-0.122-2.596-0.675-5.073-1.579-7.374H193.602
+		z M143.99,291.079c0.111,2.357-0.72,4.589-2.338,6.287c-1.621,1.699-3.806,2.634-6.152,2.634c-4.687,0-8.5-3.813-8.5-8.5
+		c0-4.613,3.696-8.371,8.281-8.489C139.899,283.129,143.784,286.698,143.99,291.079z M336,219.5v56c0,4.687-3.813,8.5-8.5,8.5
+		h-27.177l-73.878-14.949c-3.447-0.697-6.978-1.051-10.493-1.051c-0.054,0-0.107,0.007-0.161,0.007
+		c-0.097-0.001-0.193-0.007-0.29-0.007H199v-57h25v16.5c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5V211h88.5
+		C332.187,211,336,214.813,336,219.5z M223,155.5c0-0.276,0.224-0.5,0.5-0.5h16c0.276,0,0.5,0.224,0.5,0.5V196h-17V155.5z M15,275.5
+		v-56c0-4.687,3.813-8.5,8.5-8.5h24c4.142,0,7.5-3.358,7.5-7.5V131h93.667c3.496,0,6.594,2.097,7.892,5.343l1.463,3.657H135.5h-56
+		c-4.142,0-7.5,3.358-7.5,7.5v72c0,17.369,14.131,31.5,31.5,31.5h56c4.142,0,7.5-3.358,7.5-7.5v-32c0-0.167-0.011-0.334-0.022-0.5
+		H184v57c0,0-48.874,0-48.952,0c-3.517,0-7.047,0.354-10.494,1.051L50.717,284H23.5C18.813,284,15,280.187,15,275.5z M23,331.5
+		c0-17.92,14.58-32.5,32.5-32.5S88,313.579,88,331.5S73.42,364,55.5,364S23,349.42,23,331.5z M295.5,364
+		c-12.311,0-23.046-6.882-28.559-17h57.119C318.546,357.118,307.811,364,295.5,364z M383,356v-70.5c0-1.378,1.122-2.5,2.563-2.5
+		c0.916,0,1.757,0.5,2.195,1.303L426.866,356H383z"
+            />
+          </g>
+        </svg>
+        <h1>Builders & co</h1>
+      </div>
+    </header>
+    <div class="main">
+      <div class="side-bar" id="sideBar">
         <ul>
-          <li class="dashboardLi active">
-            <button class="list-item dashboardBtn">DASHBOARD</button>
+          <li id="dashboardLi">
+            <button class="li-item active" id="dashboardNavBtn">
+              DASHOARD
+            </button>
           </li>
-          <li class="customersLi">
-            <button class="list-item customersBtn">CUSTOMERS</button>
+          <li id="customersLi" class="active">
+            <button class="li-item" id="customersNavBtn">CUSTOMERS</button>
           </li>
-          <li class="apartmentsLi">
-            <button class="list-item apartmentsBtn">APARTMENTS</button>
+          <li id="apartmentsLi">
+            <button class="li-item" id="apartmentsNavBtn">APARTMENTS</button>
           </li>
-          <li class="installmentsLi">
-            <button class="list-item installmentsBtn">INSTALLMENTS</button>
+          <li id="bookingsLi">
+            <button class="li-item" id="bookingsNavBtn">BOOKINGS</button>
+          </li>
+          <li id="installmentsLi">
+            <button class="li-item" id="installmentsNavBtn">
+              INSTALLMENTS
+            </button>
           </li>
         </ul>
       </div>
-      <div class="main-content">
-        <section class="dashboard active-sec" style="display: block">
-          <h2>dashboard</h2>
-        </section>
-        <section class="customers" style="display: none">
-          <h2>customer</h2>
-          <form id="customerForm">
-            <input type="text" placeholder="first name" id="firstName" />
-            <input type="text" placeholder="last name" id="lastName" />
-            <input type="email" placeholder="email" id="email"/>
-            <input type="number" placeholder="contact" id="contact" />
-            <input type="number" placeholder="nic" id="nic"/>
-            <button type="submit">Add Customer</button>
-          </form>
-          <h2>View Customers</h2>
-          <table>
-              <thead>
-                  <tr>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Email</th>
-                      <th>Contact</th>
-                      <th>NIC</th>
-                      <th>Created at</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Bob</td>
-                      <td>John</td>
-                      <td>bob@gmail.com</td>
-                      <td>0312345678</td>
-                      <td>42301312345678</td>
-                      <td>1-10-2025 10:00</td>
-                  </tr>
-                  <tr>
-                      <td>Bob</td>
-                      <td>John</td>
-                      <td>bob@gmail.com</td>
-                      <td>0312345678</td>
-                      <td>42301312345678</td>
-                      <td>1-10-2025 10:00</td>
-                  </tr>
-                  <tr>
-                      <td>Bob</td>
-                      <td>John</td>
-                      <td>bob@gmail.com</td>
-                      <td>0312345678</td>
-                      <td>42301312345678</td>
-                      <td>1-10-2025 10:00</td>
-                  </tr>
-              </tbody>
-          </table>
-        </section>
-        <section class="apartments" style="display: none">
-          <h2>Apartments</h2>
-        </section>
-        <section class="installments" style="display: none">
-          <h2>installments</h2>
-        </section>
-      </div>
+      <section class="dashboard" id="dashboardSec">
+        <h1>Dashboard</h1>
+        <div class="dashboard-cards">
+          <div class="card">Total Customers: <span id="totalCustomers"></span></div>
+          <div class="card">Total Apartments: <span id="totalApartments"></span></div>
+          <div class="card">Available Apartments: <span id="availableApartments"></span></div>
+          <div class="card">Total Bookings: <span id="totalBookings"></span></div>
+          <div class="card">Pending Installments: <span id="pendingInstallments"></span></div>
+        </div>
+        <h2>Recent Bookings</h2>
+        <ul id="recentBookings"></ul>
+        <h2>Upcoming Installments</h2>
+        <ul id="upcomingInstallments"></ul>
+      </section>
+      <section class="customers active-sec" id="customersSec">
+        <h1>Customers</h1>
+        <form id="customerForm">
+          <input
+            type="text"
+            placeholder="first name"
+            id="firstNameInput"
+            required
+          />
+          <input
+            type="text"
+            placeholder="last name"
+            id="lastNameInput"
+            required
+          />
+          <input type="email" placeholder="email" id="emailInput" required />
+          <input
+            type="number"
+            placeholder="contact"
+            id="contactInput"
+            required
+          />
+          <input type="number" placeholder="nic" id="nicInput" required />
+          <br />
+          <button type="submit">Add Customer</button>
+        </form>
+        <h2>View Customers</h2>
+        <div class="customerSearchInput">
+          <input
+            type="text"
+            placeholder="Search ..."
+            id="customerSearchInput"
+            class="search-bar"
+          />
+        </div>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>NIC</th>
+              <th>Created at</th>
+              <th>Actions</th> <!-- Added -->
+            </tr>
+          </thead>
+          <tbody id="customerBody">
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>0929829</td>
+              <td>323u2w32</td>
+              <td>18-05-25 10:00</td>
+              <td></td> <!-- Added -->
+            </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>0929829</td>
+              <td>323u2w32</td>
+              <td>18-05-25 10:00</td>
+              <td></td> <!-- Added -->
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="apartments" id="apartmentsSec">
+        <h1>Apartments</h1>
+        <form id="apartmentsForm">
+          <input type="text" placeholder="Floor" id="floorInput" />
+          <input type="text" placeholder="Type" id="typeInput" />
+          <input type="email" placeholder="Prize" id="prizeInput" />
+          <input type="number" placeholder="Size" id="sizeInput" />
+          <button type="submit">Add Apartment</button>
+        </form>
+        <h2>View Apartments</h2>
+        <input
+          type="text"
+          placeholder="Search ..."
+          id="apartmentSearchInput"
+          class="search-bar"
+        />
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Floor</th>
+              <th>Type</th>
+              <th>Prize</th>
+              <th>Size</th>
+              <th>Status</th>
+              <th>Created at</th>
+            </tr>
+          </thead>
+          <tbody id="apartmentsBody">
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>0929829</td>
+              <td>323u2w32</td>
+              <td></td>
+              <td>18-05-25 10:00</td>
+            </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>0929829</td>
+              <td>323u2w32</td>
+              <td></td>
+              <td>18-05-25 10:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="bookings" id="bookingsSec">
+        <h1>Bookings</h1>
+        <form id="bookingForm">
+          <input type="text" placeholder="Apartment ID" id="apartmentIdInput" />
+          <input type="text" placeholder="Customer ID" id="customerIdInput" />
+          <input type="text" placeholder="Type" id="typeInput" />
+          <input type="email" placeholder="Prize" id="prizeInput" />
+          <input type="number" placeholder="Size" id="sizeInput" />
+          <button type="submit">Add Apartment</button>
+        </form>
+        <h2>View Bookings</h2>
+        <input
+          type="text"
+          placeholder="Search ..."
+          id="bookingSearchInput"
+          class="search-bar"
+        />
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Customer ID</th>
+              <th>Customer Name</th>
+              <th>Apartment ID</th>
+              <th>Down Payment</th>
+              <th>Created at</th>
+            </tr>
+          </thead>
+          <tbody id="bookingsBody">
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td></td>
+              <td>18-05-25 10:00</td>
+            </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>323u2w32</td>
+              <td>18-05-25 10:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="installments" id="installmentsSec">
+        <h1>Installments</h1>
+        <form id="installmentForm">
+          <input type="text" placeholder="Booking ID" id="bookingIdInput" />
+          <input
+            type="text"
+            placeholder="Installment Number"
+            id="installmentNumberInput"
+          />
+          <input type="text" placeholder="Amount" id="amountInput" />
+          <input type="date" placeholder="Due Date" id="dueDateInput" />
+          <button type="submit">Add Installments</button>
+        </form>
+        <h2>View Installments</h2>
+        <input
+          type="text"
+          placeholder="Search ..."
+          id="installmentSearchInput"
+          class="search-bar"
+        />
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Installment ID</th>
+              <th>Booking ID</th>
+              <th>Customer</th>
+              <th>Apartment ID</th>
+              <th>Installment #</th>
+              <th>Amount</th>
+              <th>Due Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="installmentsBody">
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td></td>
+              <td>18-05-25 10:00</td>
+            </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>323u2w32</td>
+              <td>18-05-25 10:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>

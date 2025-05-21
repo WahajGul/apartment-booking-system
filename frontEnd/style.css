@@ -1,150 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 body {
-
-    background: #f4f6fb;
+    background: #fff;
 }
 
-.container {
+header {
+    top: 0;
+    width: 100%;
+    background: #111;
+    display: flex;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    color: #fff;
+}
+
+.toggle-side-bar {
+    border: none;
+    background: none;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.main {
     display: flex;
     flex-direction: row;
-    height: 100vh;
     width: 100%;
-    justify-content: start;
+    min-height: 100%;
+    gap: 1rem;
 }
 
-.side-panel {
-    background: #232634;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    transition: fill 0.2s;
+.main .side-bar {
+    min-height: 100vh;
+    width: 30%;
+    background: #000;
+    opacity: 0;
+    display: none;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    transform: translateX(-100%);
+    /* transition: transform 2s ease-in; */
+    z-index: 100;
+
 }
 
-.logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #f4dbd6;
-    margin-bottom: 5rem;
+.main .side-bar.active {
+    opacity: 1;
+    transition: all 5s ease-in;
+    display: block;
+    transform: translateX(0);
 }
 
-ul {
+.side-bar ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-
+    margin-top: 5rem;
 }
 
 li {
     list-style: none;
     border-radius: 12px;
-    width: 100%;
-    border: 2px solid #f4dbd6;
+    /* width: 100%; */
+    border: 2px solid #fff;
     margin: 1rem 0.5rem;
 }
 
-li>button.list-item {
+li>button.li-item {
     border: none;
     background: none;
     padding: 1rem;
     width: 100%;
-    color: #f4dbd6;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 li:hover,
 li.active {
-    background: #f4dbd6;
-    color: #232634;
+    background: #fff;
+    color: #000;
     transform: translateY(-2px) scale(1.05);
 }
 
 li:hover>button,
 li.active>button {
-    color: #232634;
+    color: #000;
 
 }
 
-.main-content {
-    flex: 1;
-    background: #fff;
-    width: 90%;
-    padding: 2rem;
-    margin: 2rem;
+.main section {
+    width: 100%;
+    background: #255f38;
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-}
-
-.main-content section {
+    padding: 2rem;
+    margin: 1rem;
     position: absolute;
     opacity: 0;
+    color: #fff;
 }
 
-.main-content section.active-sec {
+.main section.active-sec {
     opacity: 1;
-    position: static
+    /* background-image: url('https://www.freepik.com/vectors/building-png'); */
+    position: static;
 }
 
-#customerForm {
+
+
+form {
 
     margin-bottom: 3rem;
 }
 
-#customerForm input {
+form input {
     margin: 0.5rem 0.5rem 0.5rem 0;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 12px;
-    width: 15%;
+    width: 20%;
 
 }
 
-#customerForm button {
+form button {
     border: none;
     border-radius: 4px;
     background: #f4dbd6;
     color: #232323;
     padding: 0.5rem 1.2rem;
     cursor: pointer;
+    margin-right: 1rem;
 }
 
-#customerForm button:hover {
+form button:hover {
     background: #e4dbd6;
 
 }
 
-table {
+.styled-table {
     border-collapse: collapse;
-    margin-top: 3rem;
-    border-radius: 8px;
-    width: 100%;
-    border-radius: 8px;
+    margin: 25px 0;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
     background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.styled-table thead tr {
+    background-color: #114;
+    color: #fff;
     text-align: left;
 }
 
-thead th {
-    border: 1px solid #ccc;
-    background: #f4f6fb;
+.styled-table th,
+.styled-table td {
+    padding: 14px 18px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #e3e3e3;
+    transition: background 0.2s;
+    color: #000;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f5f6fa;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #e0e7ff;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #114;
+}
+
+
+.search-bar {
+
+    margin: 0.5rem 0.5rem 0.5rem 0;
     padding: 0.5rem;
-    text-align: center;
-}
-
-tbody td {
     border: 1px solid #ccc;
-    padding: 0.2rem;
+    border-radius: 12px;
 }
 
-
-tbody tr:nth-child(odd) {
-    background: #ddd;
+/* Dashboard Section */
+.dashboard {
+  padding: 2rem;
+  background: #f8f9fa;
 }
-tbody tr:nth-child(even) {
-    background: #fefefe;
+
+.dashboard h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-cards .card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+  min-width: 200px;
+  flex: 1 1 200px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.dashboard-cards .card span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.dashboard h2 {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: #000000;
+}
+
+#recentBookings,
+#upcomingInstallments {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style: none;
+  max-width: 600px;
+}
+
+#recentBookings li,
+#upcomingInstallments li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  color: #000000;
+}
+
+#recentBookings li:last-child,
+#upcomingInstallments li:last-child {
+  border-bottom: none;
 }
