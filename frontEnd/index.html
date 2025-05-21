@@ -65,12 +65,12 @@
     <div class="main">
       <div class="side-bar" id="sideBar">
         <ul>
-          <li id="dashboardLi">
+          <li id="dashboardLi" class="active">
             <button class="li-item active" id="dashboardNavBtn">
               DASHOARD
             </button>
           </li>
-          <li id="customersLi" class="active">
+          <li id="customersLi">
             <button class="li-item" id="customersNavBtn">CUSTOMERS</button>
           </li>
           <li id="apartmentsLi">
@@ -86,14 +86,24 @@
           </li>
         </ul>
       </div>
-      <section class="dashboard" id="dashboardSec">
+      <section class="dashboard active-sec" id="dashboardSec">
         <h1>Dashboard</h1>
         <div class="dashboard-cards">
-          <div class="card">Total Customers: <span id="totalCustomers">12</span></div>
-          <div class="card">Total Apartments: <span id="totalApartments">8</span></div>
-          <div class="card">Available Apartments: <span id="availableApartments">3</span></div>
-          <div class="card">Total Bookings: <span id="totalBookings">6</span></div>
-          <div class="card">Pending Installments: <span id="pendingInstallments">4</span></div>
+          <div class="card">
+            Total Customers: <span id="totalCustomers">12</span>
+          </div>
+          <div class="card">
+            Total Apartments: <span id="totalApartments">8</span>
+          </div>
+          <div class="card">
+            Available Apartments: <span id="availableApartments">3</span>
+          </div>
+          <div class="card">
+            Total Bookings: <span id="totalBookings">6</span>
+          </div>
+          <div class="card">
+            Pending Installments: <span id="pendingInstallments">4</span>
+          </div>
         </div>
         <h2>Recent Bookings</h2>
         <ul id="recentBookings">
@@ -108,29 +118,29 @@
           <li>Ahmed Raza - Rs. 8,500 due on 2025-06-05</li>
         </ul>
       </section>
-      <section class="customers active-sec" id="customersSec">
+      <section class="customers" id="customersSec">
         <h1>Customers</h1>
         <form id="customerForm">
           <input
             type="text"
-            placeholder="first name"
+            placeholder="First Name"
             id="firstNameInput"
             required
           />
           <input
             type="text"
-            placeholder="last name"
+            placeholder="Last Name"
             id="lastNameInput"
             required
           />
-          <input type="email" placeholder="email" id="emailInput" required />
+          <input type="email" placeholder="Email" id="emailInput" required />
           <input
-            type="number"
-            placeholder="contact"
+            type="text"
+            placeholder="Contact"
             id="contactInput"
             required
           />
-          <input type="number" placeholder="nic" id="nicInput" required />
+          <input type="text" placeholder="NIC" id="nicInput" required />
           <br />
           <button type="submit">Add Customer</button>
         </form>
@@ -146,42 +156,27 @@
         <table class="styled-table">
           <thead>
             <tr>
+              <th>Customer ID</th> <!-- Added -->
               <th>First Name</th>
               <th>Last Name</th>
               <th>Email</th>
               <th>Contact</th>
               <th>NIC</th>
               <th>Created at</th>
-              <th>Actions</th> <!-- Added -->
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody id="customerBody">
-            <tr>
-              <td>bob</td>
-              <td>jade</td>
-              <td>bob@gmail</td>
-              <td>0929829</td>
-              <td>323u2w32</td>
-              <td>18-05-25 10:00</td>
-              <td></td> <!-- Added -->
-            </tr>
-            <tr>
-              <td>bob</td>
-              <td>jade</td>
-              <td>bob@gmail</td>
-              <td>0929829</td>
-              <td>323u2w32</td>
-              <td>18-05-25 10:00</td>
-            </tr>
+            <!-- JS will fill this -->
           </tbody>
         </table>
       </section>
       <section class="apartments" id="apartmentsSec">
         <h1>Apartments</h1>
         <form id="apartmentsForm">
-          <input type="text" placeholder="Floor" id="floorInput" />
+          <input type="number" placeholder="Floor" id="floorInput" />
           <input type="text" placeholder="Type" id="typeInput" />
-          <input type="number" placeholder="Prize" id="prizeInput" />
+          <input type="number" placeholder="Price" id="prizeInput" />
           <input type="number" placeholder="Size" id="sizeInput" />
           <button type="submit">Add Apartment</button>
         </form>
@@ -205,7 +200,8 @@
             </tr>
           </thead>
           <tbody id="apartmentsBody">
-            <tr>3000000
+            <tr>
+              3000000
               <td>bob</td>
               <td>jade</td>
               <td>bob@gmail</td>
@@ -229,12 +225,10 @@
       <section class="bookings" id="bookingsSec">
         <h1>Bookings</h1>
         <form id="bookingForm">
-          <input type="text" placeholder="Apartment ID" id="apartmentIdInput" />
-          <input type="text" placeholder="Customer ID" id="customerIdInput" />
-          <input type="text" placeholder="Type" id="typeInput" />
-          <input type="number" placeholder="Prize" id="prizeInput" />
-          <input type="number" placeholder="Size" id="sizeInput" />
-          <button type="submit">Add Apartment</button>
+          <input type="number" placeholder="Apartment ID" id="apartmentIdInput" required />
+          <input type="number" placeholder="Customer ID" id="customerIdInput" required />
+          <input type="number" placeholder="Down Payment" id="downPaymentInput" required />
+          <button type="submit">Add Booking</button>
         </form>
         <h2>View Bookings</h2>
         <input
@@ -274,14 +268,10 @@
       <section class="installments" id="installmentsSec">
         <h1>Installments</h1>
         <form id="installmentForm">
-          <input type="text" placeholder="Booking ID" id="bookingIdInput" />
-          <input
-            type="text"
-            placeholder="Installment Number"
-            id="installmentNumberInput"
-          />
-          <input type="text" placeholder="Amount" id="amountInput" />
-          <input type="date" placeholder="Due Date" id="dueDateInput" />
+          <input type="number" placeholder="Booking ID" id="bookingIdInput" required />
+          <input type="number" placeholder="Installment Number" id="installmentNumberInput" required />
+          <input type="number" placeholder="Amount" id="amountInput" required />
+          <input type="date" id="dueDateInput" required />
           <button type="submit">Add Installment</button>
         </form>
         <h2>View Installments</h2>

@@ -82,6 +82,7 @@ async function loadCustomers() {
   const data = await getAll("customers");
   customerBody.innerHTML = data.map(c => `
     <tr data-id="${c.customer_id}">
+      <td>${c.customer_id}</td>
       <td>${c.first_name}</td>
       <td>${c.last_name}</td>
       <td>${c.email}</td>
