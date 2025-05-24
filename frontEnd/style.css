@@ -4,20 +4,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 
 body {
-    background: #fff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    /* Assuming Inter font for consistency */
+    /* A pleasant gradient background */
 }
 
 header {
     top: 0;
     width: 100%;
-    background: #111;
+    /* background: #111; */
+    position: sticky;
+    top: 0;
+    background-color: #1a202c;
+    /* A dark, almost black background for the header */
     display: flex;
+    z-index: 999;
 }
 
 header .logo {
@@ -104,7 +112,10 @@ li.active>button {
 
 .main section {
     width: 100%;
-    background: #255f38;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    /* Frosted glass effect */
     border-radius: 12px;
     padding: 2rem;
     margin: 1rem;
@@ -202,70 +213,72 @@ form button:hover {
 
 /* Dashboard Section */
 .dashboard {
-  padding: 2rem;
-  background: #f8f9fa;
+    padding: 2rem;
+    background: #f8f9fa;
 }
 
 .dashboard h1 {
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  color: #000000;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #000000;
 }
 
 .dashboard-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .dashboard-cards .card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 1.5rem 2rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #000000;
-  min-width: 200px;
-  flex: 1 1 200px;
-  text-align: center;
-  transition: box-shadow 0.2s;
+    /* background: #fff; */
+
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000;
+    min-width: 200px;
+    flex: 1 1 200px;
+    text-align: center;
+    transition: box-shadow 0.2s;
 }
 
 .dashboard-cards .card span {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 2rem;
-  color: #007bff;
-  font-weight: bold;
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    color: #007bff;
+    font-weight: bold;
 }
 
 .dashboard h2 {
-  margin-top: 2rem;
-  font-size: 1.3rem;
-  color: #000000;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: #000000;
 }
 
 #recentBookings,
 #upcomingInstallments {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  padding: 1rem 1.5rem;
-  margin-bottom: 1.5rem;
-  list-style: none;
-  max-width: 600px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    list-style: none;
+    max-width: 600px;
 }
 
 #recentBookings li,
 #upcomingInstallments li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
-  color: #000000;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    color: #000000;
 }
 
 #recentBookings li:last-child,
 #upcomingInstallments li:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
