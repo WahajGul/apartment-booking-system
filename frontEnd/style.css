@@ -79,7 +79,7 @@ header .logo {
     margin-top: 5rem;
 }
 
-li {
+.side-bar ul li {
     list-style: none;
     border-radius: 12px;
     /* width: 100%; */
@@ -87,7 +87,7 @@ li {
     margin: 1rem 0.5rem;
 }
 
-li>button.li-item {
+.side-bar li>button.li-item {
     border: none;
     background: none;
     padding: 1rem;
@@ -97,15 +97,15 @@ li>button.li-item {
     cursor: pointer;
 }
 
-li:hover,
-li.active {
+.side-bar li:hover,
+.side-bar li.active {
     background: #fff;
     color: #000;
     transform: translateY(-2px) scale(1.05);
 }
 
-li:hover>button,
-li.active>button {
+.side-bar li:hover>button,
+.side-bar li.active>button {
     color: #000;
 
 }
@@ -149,8 +149,8 @@ form input {
 form button {
     border: none;
     border-radius: 4px;
-    background: #f4dbd6;
-    color: #232323;
+    background: #114;
+    color: #fff;
     padding: 0.5rem 1.2rem;
     cursor: pointer;
     margin-right: 1rem;
@@ -250,7 +250,7 @@ form button:hover {
     display: block;
     margin-top: 0.5rem;
     font-size: 2rem;
-    color: #007bff;
+    color: #000;
     font-weight: bold;
 }
 
@@ -262,7 +262,8 @@ form button:hover {
 
 #recentBookings,
 #upcomingInstallments {
-    background: #fff;
+    /* background: #fff; */
+    background: linear-gradient(270deg, #667eea 0%, #764ba2 100%);
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
     padding: 1rem 1.5rem;
@@ -274,7 +275,9 @@ form button:hover {
 #recentBookings li,
 #upcomingInstallments li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
+
+    border-bottom: none;
+    /* border-bottom: 1px solid #eee; */
     color: #000000;
 }
 

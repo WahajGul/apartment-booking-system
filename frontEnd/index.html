@@ -144,6 +144,37 @@
           <br />
           <button type="submit">Add Customer</button>
         </form>
+        <form id="customerEditForm" style="display:none; margin-top:1rem;">
+          <input type="hidden" id="editCustomerId" />
+          <input
+            type="text"
+            placeholder="First Name"
+            id="editFirstNameInput"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            id="editLastNameInput"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            id="editEmailInput"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Contact"
+            id="editContactInput"
+            required
+          />
+          <input type="text" placeholder="NIC" id="editNicInput" required />
+          <br />
+          <button type="submit" id="updateCustomerBtn">Update Customer</button>
+          <button type="button" id="cancelEditBtn">Cancel</button>
+        </form>
         <h2>View Customers</h2>
         <div class="customerSearchInput">
           <input

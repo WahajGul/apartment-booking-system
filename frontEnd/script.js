@@ -139,32 +139,49 @@ function setCustomerActions() {
       }
     };
   });
+
   // Edit
   document.querySelectorAll('.edit-btn').forEach(btn => {
     btn.onclick = () => {
+      // Hide add form, show edit form
+      customerForm.style.display = "none";
+      customerEditForm.style.display = "block";
+      document.getElementById('updateCustomerBtn').textContent = "Update Customer";
+
+      // Get row data
       const row = btn.closest('tr');
-      firstNameInput.value = row.children[0].textContent;
-      lastNameInput.value = row.children[1].textContent;
-      emailInput.value = row.children[2].textContent;
-      contactInput.value = row.children[3].textContent;
-      nicInput.value = row.children[4].textContent;
-      customerForm.onsubmit = async function(e) {
-        e.preventDefault();
-        await updateRow('customers', btn.dataset.id, {
-          first_name: firstNameInput.value,
-          last_name: lastNameInput.value,
-          email: emailInput.value,
-          contact: contactInput.value,
-          nic: nicInput.value
-        });
-        customerForm.reset();
-        customerForm.onsubmit = defaultCustomerSubmit;
-        loadCustomers();
-      };
+      editCustomerId.value = row.children[0].textContent;
+      editFirstNameInput.value = row.children[1].textContent;
+      editLastNameInput.value = row.children[2].textContent;
+      editEmailInput.value = row.children[3].textContent;
+      editContactInput.value = row.children[4].textContent;
+      editNicInput.value = row.children[5].textContent;
     };
   });
 }
-const defaultCustomerSubmit = customerForm.onsubmit;
+
+// Handle update submit
+customerEditForm.onsubmit = async function(e) {
+  e.preventDefault();
+  await updateRow('customers', editCustomerId.value, {
+    first_name: editFirstNameInput.value,
+    last_name: editLastNameInput.value,
+    email: editEmailInput.value,
+    contact: editContactInput.value,
+    nic: editNicInput.value
+  });
+  customerEditForm.reset();
+  customerEditForm.style.display = "none";
+  customerForm.style.display = "block";
+  loadCustomers();
+};
+
+// Handle cancel
+cancelEditBtn.onclick = function() {
+  customerEditForm.reset();
+  customerEditForm.style.display = "none";
+  customerForm.style.display = "block";
+};
 
 // --- Apartments ---
 async function loadApartments() {
@@ -228,14 +245,14 @@ async function loadBookings() {
 }
 bookingForm.onsubmit = async function(e) {
   e.preventDefault();
-  if (!apartmentIdInput.value || !customerIdInput.value || !prizeInput.value) {
+  if (!apartmentIdInput.value || !customerIdInput.value || !downPaymentInput.value) {
     alert("Missing field");
     return;
   }
   await addRow("bookings", {
     apartment_id: apartmentIdInput.value,
     customer_id: customerIdInput.value,
-    down_payment: prizeInput.value
+    down_payment: downPaymentInput.value
   });
   bookingForm.reset();
   loadBookings();
