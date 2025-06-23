@@ -14,6 +14,7 @@ app.use(express.json());
 // --- CUSTOMERS ---
 app.get("/customers", async (req, res) => {
   const { column, value } = req.query;
+
   const data = await searchCustomers(column, value);
   res.json(data);
 });

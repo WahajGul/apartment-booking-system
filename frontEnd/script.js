@@ -330,14 +330,14 @@ function loadDashboardExample() {
   // Example recent bookings
   recentBookings.innerHTML = `
     <li>Ali Hassan booked Apartment #2 (2025-05-20)</li>
-    <li>Sara Khan booked Apartment #5 (2025-05-18)</li>
+    <li>Talha Faizan booked Apartment #5 (2025-05-18)</li>
     <li>Ahmed Raza booked Apartment #1 (2025-05-15)</li>
   `;
 
   // Example upcoming installments
   upcomingInstallments.innerHTML = `
     <li>Ali Hassan - Rs. 10,000 due on 2025-06-01</li>
-    <li>Sara Khan - Rs. 12,000 due on 2025-06-03</li>
+    <li>Talha Faizan - Rs. 12,000 due on 2025-06-03</li>
     <li>Ahmed Raza - Rs. 8,500 due on 2025-06-05</li>
   `;
 }
